@@ -1,6 +1,6 @@
 {
   "name": "phase-align",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Finds patterns in ndarrays",
   "main": "align.js",
   "directories": {
