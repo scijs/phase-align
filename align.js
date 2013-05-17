@@ -47,9 +47,9 @@ module.exports = function align(a, b, options) {
   ops.negeq(ay)
   ops.assigns(bx, 0)
   if(normalized) {
-    normalize(ax.hi.apply(bx, b.shape), b)
+    normalize(bx.hi.apply(bx, b.shape), b)
   } else {
-    ops.assign(ax.hi.apply(bx, b.shape), b)
+    ops.assign(bx.hi.apply(bx, b.shape), b)
   }
   ops.assigns(by, 0)
   fft(1, bx, by)
