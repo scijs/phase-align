@@ -1,6 +1,6 @@
 phase-align
 ===========
-Aligns two images up to a translation such that the sum of squared differences between them is minimized.  This can be used as a quick preprocess for other more detailed alignment algorithms.
+Aligns two [ndarrays](https://github.com/mikolalysenko/ndarray) up to a translation such that the sum of squared differences between them is minimized.  This can be used as a quick preprocess for other more detailed alignment algorithms.
 
 ## Example
 
