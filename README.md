@@ -10,7 +10,7 @@ Here is a simple example showing how to use this code to image alignment.  First
 var lena = require("luminance")(require("lena"))
 ```
 
-<img src="example/lena.png">
+<img src="https://raw.github.com/mikolalysenko/phase-align/master/example/lena.png">
 
 Next, let's cut out a patch:
 
@@ -20,22 +20,26 @@ var patch = lena.lo(222, 215).hi(80, 80)
 
 Which looks like this:
 
-<img src="example/patch.png">
+<img src="https://raw.github.com/mikolalysenko/phase-align/master/example/patch.png">
 
-Finally, we can align them:
+Finally, we can use `phase-align` to find the patch in the original image like this:
 
-``javascript
+```javascript
 var position = require("phase-align")(patch, lena)
 console.log(position)
 ```
 
-Which prints out:
+Which prints out the coordinates of the upper left corner fo the patch in the original:
 
-    [ 222, 215 ]
+```
+[ 222, 215 ]
+```
 
 ## Install
 
-    npm install phase-align
+```
+npm install phase-align
+```
 
 ## `require("phase-align")(patch, image[, options])`
 Finds the pixel coordinates of the occurence of `patch` within the larger `image`
