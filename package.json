@@ -1,0 +1,51 @@
+{
+  "name": "phase-align",
+  "version": "0.0.0",
+  "description": "Finds patterns in ndarrays",
+  "main": "align.js",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "dependencies": {
+    "bit-twiddle": "~0.0.2",
+    "ndarray": "~0.2.3",
+    "ndarray-complex": "~0.0.0",
+    "ndarray-normalize": "~0.0.0",
+    "ndarray-fft": "~0.0.2",
+    "ndarray-ops": "~0.1.3",
+    "typedarray-pool": "~0.1.1"
+  },
+  "devDependencies": {
+    "lena": "~0.0.0",
+    "luminance": "~0.0.0",
+    "save-pixels": "~0.0.1",
+    "tap": "~0.4.3"
+  },
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/phase-align.git"
+  },
+  "keywords": [
+    "phase",
+    "correlation",
+    "normalized",
+    "fft",
+    "alignment",
+    "matching",
+    "patch",
+    "template",
+    "image",
+    "cross",
+    "volume",
+    "array",
+    "ndarray"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "715632cba28bd6f00b7580cbeb3d641dd988943d"
+}
