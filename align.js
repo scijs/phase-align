@@ -19,7 +19,7 @@ module.exports = function align(a, b, options) {
     , nshape = new Array(d)
     , nstride = new Array(d)
     , i, s = 1
-    , normalize = "normalize" in options ? options.normalize : true
+    , normalized = "normalize" in options ? options.normalize : true
   
   for(i=0; i<d; ++i) {
     nshape[i] = bits.nextPow2(a.shape[i] + b.shape[i] - 1)
@@ -37,7 +37,7 @@ module.exports = function align(a, b, options) {
     , by = ndarray.ctor(by_t, nshape, nstride, 0)
   
   ops.assigns(ax, 0)
-  if(normalize) {
+  if(normalized) {
     normalize(ax.hi.apply(ax, a.shape), a)
   } else {
     ops.assign(ax.hi.apply(ax, a.shape), a)
@@ -46,7 +46,7 @@ module.exports = function align(a, b, options) {
   fft(1, ax, ay)
   ops.negeq(ay)
   ops.assigns(bx, 0)
-    if(normalize) {
+  if(normalized) {
     normalize(ax.hi.apply(bx, b.shape), b)
   } else {
     ops.assign(ax.hi.apply(bx, b.shape), b)
