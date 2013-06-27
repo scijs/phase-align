@@ -28,13 +28,13 @@ module.exports = function align(a, b, options) {
   }
   
   var ax_t = pool.mallocDouble(s)
-    , ax = ndarray.ctor(ax_t, nshape, nstride, 0)
+    , ax = ndarray(ax_t, nshape, nstride, 0)
     , ay_t = pool.mallocDouble(s)
-    , ay = ndarray.ctor(ay_t, nshape, nstride, 0)
+    , ay = ndarray(ay_t, nshape, nstride, 0)
     , bx_t = pool.mallocDouble(s)
-    , bx = ndarray.ctor(bx_t, nshape, nstride, 0)
+    , bx = ndarray(bx_t, nshape, nstride, 0)
     , by_t = pool.mallocDouble(s)
-    , by = ndarray.ctor(by_t, nshape, nstride, 0)
+    , by = ndarray(by_t, nshape, nstride, 0)
   
   ops.assigns(ax, 0)
   if(normalized) {
