@@ -4,7 +4,7 @@ var ndarray = require("ndarray")
 var fft = require("ndarray-fft")
 var pool = require("typedarray-pool")
 var normalize = require("ndarray-normalize")
-var bits = require("bit-twiddle")
+var nextPow2 = require("next-pow-2")
 var ops = require("ndarray-ops")
 var cops = require("ndarray-complex")
 
@@ -22,7 +22,7 @@ module.exports = function align(a, b, options) {
     , normalized = "normalize" in options ? options.normalize : true
   
   for(i=0; i<d; ++i) {
-    nshape[i] = bits.nextPow2(a.shape[i] + b.shape[i] - 1)
+    nshape[i] = nextPow2(a.shape[i] + b.shape[i] - 1)
     nstride[i] = s
     s *= nshape[i]
   }
@@ -37,7 +37,7 @@ module.exports = function align(a, b, options) {
     , by = ndarray(by_t, nshape, nstride, 0)
   
   ops.assigns(ax, 0)
-  if(normalized) {
+  if(normalized && a.size > 1) {
     normalize(ax.hi.apply(ax, a.shape), a)
   } else {
     ops.assign(ax.hi.apply(ax, a.shape), a)
@@ -46,7 +46,7 @@ module.exports = function align(a, b, options) {
   fft(1, ax, ay)
   ops.negeq(ay)
   ops.assigns(bx, 0)
-  if(normalized) {
+  if(normalized && b.size > 1) {
     normalize(bx.hi.apply(bx, b.shape), b)
   } else {
     ops.assign(bx.hi.apply(bx, b.shape), b)

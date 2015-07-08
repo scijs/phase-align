@@ -1,6 +1,6 @@
 {
   "name": "phase-align",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Finds patterns in ndarrays",
   "main": "align.js",
   "directories": {
@@ -8,28 +8,29 @@
     "test": "test"
   },
   "dependencies": {
-    "bit-twiddle": "~0.0.2",
-    "ndarray": "~1.0.0",
-    "ndarray-complex": "~1.0.0",
-    "ndarray-normalize": "~0.1.0",
-    "ndarray-fft": "~0.1.0",
-    "ndarray-ops": "~1.1.0",
-    "typedarray-pool": "~0.1.1"
+    "next-pow-2": "^1.0.0",
+    "ndarray": "^1.0.18",
+    "ndarray-complex": "^1.0.3",
+    "ndarray-normalize": "^1.0.0",
+    "ndarray-fft": "^1.0.0",
+    "ndarray-ops": "^1.2.2",
+    "typedarray-pool": "^1.1.0"
   },
   "devDependencies": {
-    "lena": "~1.0.0",
-    "luminance": "~1.0.0",
-    "save-pixels": "~0.2.0",
-    "tap": "~0.4.3"
+    "baboon-image": "^2.0.0",
+    "luminance": "^1.0.3",
+    "save-pixels": "^2.2.0",
+    "tape": "^4.0.0"
   },
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tape test/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mikolalysenko/phase-align.git"
+    "url": "git://github.com/scijs/phase-align.git"
   },
   "keywords": [
+    "scijs",
     "phase",
     "correlation",
     "normalized",
@@ -47,5 +48,8 @@
   "author": "Mikola Lysenko",
   "license": "MIT",
   "readmeFilename": "README.md",
-  "gitHead": "715632cba28bd6f00b7580cbeb3d641dd988943d"
+  "gitHead": "715632cba28bd6f00b7580cbeb3d641dd988943d",
+  "bugs": {
+    "url": "https://github.com/scijs/phase-align/issues"
+  }
 }
