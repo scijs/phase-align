@@ -2,8 +2,7 @@ phase-align
 ===========
 Aligns two [ndarrays](https://github.com/mikolalysenko/ndarray) up to a translation such that the sum of squared differences between them is minimized.  This can be used as a quick preprocess for other more detailed alignment algorithms.
 
-[![build status](https://secure.travis-ci.org/scijs/phase-align.png)](http://tra
-vis-ci.org/scijs/phase-align)
+[![build status](https://secure.travis-ci.org/scijs/phase-align.png)](http://travis-ci.org/scijs/phase-align)
 
 ## Example
 
